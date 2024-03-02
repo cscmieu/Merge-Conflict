@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class OpenOptionsMenu : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Close();
+        }
+    }
     void Start()
     {
         transform.localScale = Vector2.zero;
@@ -17,7 +24,7 @@ public class OpenOptionsMenu : MonoBehaviour
     }
     
     public void Close()
-    {   
+    {
         if (transform.localScale == Vector3.zero) return;
         else
         {

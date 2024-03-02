@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationForOptionsMenu : MonoBehaviour
@@ -20,7 +17,6 @@ public class AnimationForOptionsMenu : MonoBehaviour
     {
         background.alpha = 0;
         background.LeanAlpha(1, 0.5f).setEaseOutBack();
-        
     }
     
     public void Close()
