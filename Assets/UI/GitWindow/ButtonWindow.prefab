@@ -146,6 +146,8 @@ GameObject:
   - component: {fileID: 5444413704055582179}
   - component: {fileID: 4562197002428210981}
   - component: {fileID: 3866589616879206118}
+  - component: {fileID: 8137412108729989086}
+  - component: {fileID: 4510374373042649266}
   m_Layer: 0
   m_Name: ButtonWindow
   m_TagString: Untagged
@@ -166,8 +168,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5895524884552348471}
-  - {fileID: 7249245285022190264}
   - {fileID: 7552017134901429071}
+  - {fileID: 7249245285022190264}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -257,6 +259,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8137412108729989086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887733977283313713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debb1149eeae70e40997ef1949f3b8b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonDescriptionData:
+    title: Commit de Fou
+    pseudo: Juvisy
+    date: 7 hours ago
+    description: Let's go guyss
+    id: 0
+  title: {fileID: 1049393369807963419}
+  pseudo: {fileID: 6065617991016500954}
+  date: {fileID: 5551489867637413002}
+--- !u!114 &4510374373042649266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887733977283313713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50ab627695d1774c8e3f2da4451202a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 1049393369807963419}
+  description: {fileID: 0}
+  idText: {fileID: 0}
 --- !u!1 &4380935893291574300
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -10}
-  m_SizeDelta: {x: 50, y: 20}
+  m_AnchoredPosition: {x: -55, y: -10}
+  m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4199608541585179942
 CanvasRenderer:
@@ -425,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -10}
-  m_SizeDelta: {x: 50, y: 20}
+  m_AnchoredPosition: {x: 55, y: -10}
+  m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5759641932631447080
 CanvasRenderer:
