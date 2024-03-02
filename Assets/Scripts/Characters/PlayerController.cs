@@ -56,8 +56,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
         Jump();
+        Move();
+        
         if (!_isGrounded)
         {
             _rigidbody.AddForce(Vector3.down * forceGravity, ForceMode.Acceleration);
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         var dirVect = (transform.forward * dirVertical + transform.right * dirHorizontal).normalized;
 
-        var vectUp = Vector3.up * 0.4f;
+        var vectUp = Vector3.up * 0.45f;
         Debug.DrawRay(transform.position + vectUp, dirVect, Color.red,1f);
         if (Physics.Raycast(transform.position + vectUp, dirVect, out RaycastHit hit, 1))
         {
