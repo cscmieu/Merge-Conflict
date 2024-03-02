@@ -132,8 +132,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 origin = new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z);
         Vector3 direction = transform.TransformDirection(Vector3.down);
-        float distance = 1f;
+        float distance = 0.7f;
 
+        Debug.DrawRay(origin, direction);
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
             _isGrounded = true;
