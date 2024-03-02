@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PauseController : MonoBehaviour
@@ -26,15 +27,26 @@ public class PauseController : MonoBehaviour
     
     public void ResumeGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenu.SetActive(false);
         pauseMenuCanvasGroup.LeanAlpha(0, 0.5f).setEaseOutBack();
         Time.timeScale = 1f;
     }
     public void PauseGame()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         pauseMenu.SetActive(true);
         pauseMenuCanvasGroup.alpha = 0;
         pauseMenuCanvasGroup.LeanAlpha(1, 0.5f).setEaseOutBack();
-        Time.timeScale = 1f;
+        StartCoroutine(PauseGameCoroutine());
     }
+    
+    IEnumerator PauseGameCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
+    }
+    
 }

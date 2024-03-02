@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AnimationForOptionsMenu : MonoBehaviour
@@ -17,6 +18,7 @@ public class AnimationForOptionsMenu : MonoBehaviour
     {
         background.alpha = 0;
         background.LeanAlpha(1, 0.5f).setEaseOutBack();
+        StartCoroutine(OnEnableCoroutine());
     }
     
     public void Close()
@@ -29,4 +31,12 @@ public class AnimationForOptionsMenu : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    
+    IEnumerator OnEnableCoroutine()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
+    }
+    
 }

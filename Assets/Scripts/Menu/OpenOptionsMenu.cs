@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenOptionsMenu : MonoBehaviour
@@ -18,6 +20,7 @@ public class OpenOptionsMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         transform.LeanScale(Vector2.one, 0.8f).setEaseOutBack();
+        StartCoroutine(OnAnimationCoroutine());
     }
     
     public void Close()
@@ -28,7 +31,13 @@ public class OpenOptionsMenu : MonoBehaviour
             
             transform.LeanScale(Vector2.zero, 0.01f).setEaseInBack();
             gameObject.SetActive(false);
-        }
+        }   
+    }
+    IEnumerator OnAnimationCoroutine()
+    {
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
     }
     
 }
