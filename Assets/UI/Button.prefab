@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15.6, y: 6.5}
+  m_AnchoredPosition: {x: 12, y: 6.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2256012935413181403
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Title '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
+  m_sharedMaterial: {fileID: -9066403888143029979, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -239,8 +239,8 @@ MonoBehaviour:
     m_NormalColor: {r: 0.14117648, g: 0.16078432, b: 0.18039216, a: 1}
     m_HighlightedColor: {r: 0.26666668, g: 0.3019608, b: 0.3372549, a: 1}
     m_PressedColor: {r: 0.26666668, g: 0.3019608, b: 0.3372549, a: 1}
-    m_SelectedColor: {r: 0.14117648, g: 0.16078432, b: 0.18039216, a: 1}
-    m_DisabledColor: {r: 0.14117648, g: 0.16078432, b: 0.18039216, a: 0.5019608}
+    m_SelectedColor: {r: 0.26666668, g: 0.3019608, b: 0.3372549, a: 1}
+    m_DisabledColor: {r: 0.26666668, g: 0.3019608, b: 0.3372549, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -271,6 +271,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DescriptionButton, Assembly-CSharp
+        m_MethodName: RefreshDescriptionButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1813353948215239059}
+        m_TargetAssemblyTypeName: FillDescriptionPanel, Assembly-CSharp
+        m_MethodName: RefreshDescriptionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &5520347479451819361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,10 +308,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonDescriptionData:
-    title: Je suis le titre
-    pseudo: je suis Pseudo
-    date: je suis Date
-    description: Je suis une description faites par un con
+    title: J'ai finis l'UI
+    pseudo: Toddy
+    date: 7h ago
+    description: "Salut tout le monde c'est le premier push de mon c\xF4t\xE9. Voici
+      un test de l'UI pour que vous voyez ce que \xE7a rend "
     id: 1
   title: {fileID: 1049393369807963419}
   pseudo: {fileID: 6065617991016500954}
@@ -306,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 0}
   description: {fileID: 0}
+  idText: {fileID: 0}
 --- !u!1 &4380935893291574300
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,8 +399,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Heure
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
+  m_sharedMaterial: {fileID: -9066403888143029979, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -509,8 +535,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
+  m_sharedMaterial: {fileID: -9066403888143029979, guid: 0d6afbf5d2803494f9d6dec7bd186a94, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
