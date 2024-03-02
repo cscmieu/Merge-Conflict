@@ -9,36 +9,45 @@ public class Loader : MonoBehaviour
     [SerializeField] private List<GameObject> players;
 
     [Header("Settings")]
-    [SerializeField] private int startMap = 0;
-    [SerializeField] private int startPlayer = 0;
+    [SerializeField] private int startVersion = 0;
 
+    public static int currentVersion = 0;
 
-    private int currentMap = 0;
-    private int currentPlayer = 0;
+    private int lastVersion = -1;
+    private int maxVersion;
+
+    private void Awake() 
+    {
+        if (maps.Count != players.Count)
+        {
+            Debug.LogError("Maps and players lists must have the same size");
+        }
+
+        // constant definition
+        maxVersion = maps.Count - 1;
+
+        currentVersion = startVersion;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        // unload all maps and players and init the start version
+
         foreach (GameObject map in maps)
         {
             map.SetActive(false);
         }
-
-        if (maps[startMap].activeSelf == false)
-        {
-            LoadMap(startMap);
-        }
-
-
 
         foreach (GameObject player in players)
         {
             player.SetActive(false);
         }
 
-        if (players[startPlayer].activeSelf == false)
+        if (maps[currentVersion].activeSelf == false && players[currentVersion].activeSelf == false)
         {
-            LoadPlayer(startPlayer);
+            LoadMapAndPLayer(currentVersion);
         }
         
     }
@@ -46,39 +55,44 @@ public class Loader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentVersion != lastVersion)
+        {
+            LoadMapAndPLayer(currentVersion);
+            lastVersion = currentVersion;
+        }
+
+    }
+
+    public static void setCurrentVersion(int versionIndex)
+    {
+        currentVersion = versionIndex;
     }
 
 
-    private void LoadMap(int mapIndex)
+    private void LoadMapAndPLayer(int versionIndex)
     {
-        // Unload the current map
-        UnloadMap(currentMap);
+        //verfiy if the versionIndex is valid
+        if (versionIndex < 0 || versionIndex > maxVersion)
+        {
+            Debug.LogError("Invalid version index");
+            return;
+        }
 
-        // Load the map
-        maps[mapIndex].SetActive(true);
+        // Unload current map and current player
+        UnloadMap(currentVersion);
+        UnloadPlayer(currentVersion);
 
-        currentMap = mapIndex;
+        // Load map and player
+        maps[versionIndex].SetActive(true);
+        players[versionIndex].SetActive(true);
+
+        currentVersion = versionIndex;
     }
 
     private void UnloadMap(int mapIndex)
     {
         // Unload the map
         maps[mapIndex].SetActive(false);
-    }
-
-
-
-
-    private void LoadPlayer(int playerIndex)
-    {
-        // Unload the current player
-        UnloadPlayer(currentPlayer);
-
-        // Load the player
-        players[playerIndex].SetActive(true);
-
-        currentPlayer = playerIndex;
     }
 
     private void UnloadPlayer(int playerIndex)
