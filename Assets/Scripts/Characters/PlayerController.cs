@@ -1,35 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.UI.Image;
 
 public class PlayerController : MonoBehaviour
 {
-    public int Speed = 20;
-    public int mouseSensitivity = 1;
-    public int maxLookAngle = 35;
-    public int minLookAngle = -30;
-    public float jumpForce = 100;
+    [SerializeField] PlayerData _playerData;
+    private int Speed = 200;
+    private int mouseSensitivity = 1;
+    private int maxLookAngle = 35;
+    private int minLookAngle = -30;
+    private float jumpForce = 50;
+    private bool invertCamera = false;
+    private int forceGravity = 10;
 
-    private CharacterController _characterController;
     private Rigidbody _rigidbody;
     private bool _isGrounded = true;
-
-    public float RotateSpeed = 5.0f; // Vitesse de rotation de la caméra
 
 
     [SerializeField] GameObject _rotateCamera;
 
-    public bool invertCamera =  false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        Speed = _playerData.Speed;
+        mouseSensitivity = _playerData.MouseSensitivity;
+        maxLookAngle = _playerData.MaxLookAngle;
+        minLookAngle = _playerData.MinLookAngle;
+        jumpForce = _playerData.JumpForce;
+        invertCamera = _playerData.invertCamera;
+        forceGravity = _playerData.ForceGravity;
+
+
         UnityEngine.Cursor.visible = false; // Masque le curseur de la souris
 
-        _characterController = GetComponent<CharacterController>();
-        if ( _characterController == null ) Debug.LogError("il n'y a pas de character controller sur " + name);
 
         _rigidbody = GetComponent<Rigidbody>();
         if (_rigidbody == null) Debug.LogError("pas de rigidbody sur le player ");
@@ -40,19 +49,37 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
         Rotate();
         CheckGround();
+    }
+
+    void FixedUpdate()
+    {
+        Move();
         Jump();
+        if (!_isGrounded)
+        {
+            _rigidbody.AddForce(Vector3.down * forceGravity, ForceMode.Acceleration);
+        }
     }
 
     void Move()
     {
-        var dirVertical = Input.GetAxis("Vertical");
-        var dirHorizontal = Input.GetAxis("Horizontal");
+        var dirVertical = Input.GetAxisRaw("Vertical");
+        var dirHorizontal = Input.GetAxisRaw("Horizontal");
+        if (dirHorizontal == 0f && dirVertical == 0f) return;
 
-        var dirVect = transform.forward * dirVertical + transform.right * dirHorizontal;
-        _characterController.Move(dirVect * Speed * Time.deltaTime);
+        var dirVect = (transform.forward * dirVertical + transform.right * dirHorizontal).normalized;
+
+        var vectUp = Vector3.up * 0.4f;
+        Debug.DrawRay(transform.position + vectUp, dirVect, Color.red,1f);
+        if (Physics.Raycast(transform.position + vectUp, dirVect, out RaycastHit hit, 1))
+        {
+            return;
+        }
+
+        transform.position += Speed * Time.deltaTime * dirVect;
     }
 
     void Rotate()
@@ -96,16 +123,16 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 //Apply a force to this Rigidbody in direction of this GameObjects up axis
-                _rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                _rigidbody.AddForce(Vector3.up * jumpForce * _rigidbody.mass, ForceMode.Impulse);
             }
         }
     }
 
     private void CheckGround()
     {
-        Vector3 origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 origin = new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z);
         Vector3 direction = transform.TransformDirection(Vector3.down);
-        float distance = .2f;
+        float distance = 1f;
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {

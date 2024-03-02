@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe456e1c72d5b1543a67504a85384ef0, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  Speed: 10
+  JumpForce: 3
+  ForceGravity: 40
+  MouseSensitivity: 1
+  MinLookAngle: -30
+  MaxLookAngle: 35
+  invertCamera: 0
