@@ -2744,9 +2744,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1627200875}
     m_Modifications:
+    - target: {fileID: 733870411878685358, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684662932381245689, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4007357757778269280, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Name
       value: GitWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345862117947395535, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Pivot.x
@@ -2826,6 +2838,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053372948483498345, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314487505852995875, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
