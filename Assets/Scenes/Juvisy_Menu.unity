@@ -165,6 +165,9 @@ MonoBehaviour:
   - {fileID: 623100364}
   - {fileID: 623100364}
   - {fileID: 623100364}
+  musics: []
+  music1Versions: 
+  music2Versions: 
   startVersion: 0
 --- !u!4 &247291184
 Transform:
@@ -2748,9 +2751,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2429519365281624570, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_text
+      value: 'GitHoob
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2684662932381245689, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284476306232222845, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284476306232222845, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -190
       objectReference: {fileID: 0}
     - target: {fileID: 4007357757778269280, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Name
@@ -2842,7 +2859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7053372948483498345, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7314487505852995875, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_IsActive
