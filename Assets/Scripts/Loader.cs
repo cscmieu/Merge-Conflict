@@ -104,8 +104,6 @@ public class Loader : MonoBehaviour
             LoadMapAndPLayer(currentVersion);
             ChangeMusic(currentVersion);
             lastVersion = currentVersion;
-
-            Debug.Log("Current version: " + currentVersion);
         }
 
         // test with numpad up to 9
