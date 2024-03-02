@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         var dirVect = (transform.forward * dirVertical + transform.right * dirHorizontal).normalized;
 
-        var vectUp = Vector3.up * 0.5f;
+        var vectUp = Vector3.up * 0.4f;
         Debug.DrawRay(transform.position + vectUp, dirVect, Color.red,1f);
         if (Physics.Raycast(transform.position + vectUp, dirVect, out RaycastHit hit, 1))
         {

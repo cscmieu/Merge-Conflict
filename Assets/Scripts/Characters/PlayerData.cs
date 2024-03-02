@@ -13,7 +13,7 @@ public class PlayerData : ScriptableObject
     [Tooltip("jumpForce")]
     public int JumpForce = 5;
 
-    [Range(1, 20)]
+    [Range(1, 100)]
     [Tooltip("forceGravity")]
     public int ForceGravity = 10;
 

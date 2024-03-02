@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe456e1c72d5b1543a67504a85384ef0, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  Speed: 9
-  JumpForce: 10
-  ForceGravity: 12
+  Speed: 10
+  JumpForce: 3
+  ForceGravity: 40
   MouseSensitivity: 1
   MinLookAngle: -30
   MaxLookAngle: 35
