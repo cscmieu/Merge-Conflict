@@ -6,41 +6,22 @@ namespace Menu
 {
     public class MainMenu : MonoBehaviour
     {
+        [SerializeField] private SoundManager soundManager;
+        
         public void PlayGame()
         {
-            StartCoroutine(OnStartCoroutine());
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         public void QuitGame()
         {
-            StartCoroutine(OnQuitCoroutine());
+            Application.Quit();
         }
     
         public void LoadMainMenu()
         {
-            StartCoroutine(MenuCoroutine());
-        }
-        
-        static IEnumerator OnStartCoroutine()
-        {   
-            yield return new WaitForSeconds(2f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        
-        static IEnumerator MenuCoroutine()
-        {   
-            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(0);
         }
-        
-        static IEnumerator OnQuitCoroutine()
-        {   
-            yield return new WaitForSeconds(2f);
-            Application.Quit();
-        }
-        
-        
         
     }
 }

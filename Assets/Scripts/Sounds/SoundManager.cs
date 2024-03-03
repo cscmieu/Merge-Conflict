@@ -9,5 +9,20 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource sfxSource;
     
     [Header("-------- Audio Clip --------")]
-    public AudioClip musicClip;
+
+    public AudioClip buttonHover;
+    public AudioClip buttonClick;
+    
+    
+    
+    public void PlayButtonHover()
+    {
+        sfxSource.PlayOneShot(buttonHover);
+    }
+    
+    public void PlayButtonClick()
+    {
+        sfxSource.PlayOneShot(buttonClick);
+    }
+    
 }
