@@ -20,10 +20,10 @@ public class Loader : MonoBehaviour
 
 
 
-    private Dictionary<int, AudioSource> musicDatabase = new Dictionary<int, AudioSource>();
-    private List<List<int>> musicVersions = new List<List<int>>();
+    private Dictionary<int, AudioSource> musicDatabase = new();
+    private List<List<int>>              musicVersions = new();
 
-    public static int currentVersion = 0;
+    public static int currentVersion;
     private int lastVersion = -1;
     private int maxVersion;
 
@@ -36,11 +36,10 @@ public class Loader : MonoBehaviour
             Debug.LogError("Maps and players lists must have the same size");
         }
 
-
         // constant definition
         maxVersion = maps.Count - 1;
 
-        currentVersion = startVersion;
+        currentVersion = startVersion - 1;
         
     }
 
@@ -57,9 +56,9 @@ public class Loader : MonoBehaviour
         }
 
         // load the musicDatabase dictionary
-        foreach (List<int> musicXVersion in musicVersions)
+        foreach (var musicXVersion in musicVersions)
         {
-            foreach (int version in musicXVersion)
+            foreach (var version in musicXVersion)
             {
                 musicDatabase.Add(version, musics[musicVersions.IndexOf(musicXVersion)]);
             }
@@ -72,12 +71,12 @@ public class Loader : MonoBehaviour
 
         
         // unload all maps and players and init the start version
-        foreach (GameObject map in maps)
+        foreach (var map in maps)
         {
             map.SetActive(false);
         }
 
-        foreach (GameObject player in players)
+        foreach (var player in players)
         {
             player.SetActive(false);
         }
