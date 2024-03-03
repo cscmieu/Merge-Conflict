@@ -33,6 +33,7 @@ public class PauseController : MonoBehaviour
     
     public void ResumeGame()
     {
+        
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -54,8 +55,9 @@ public class PauseController : MonoBehaviour
         winScreen.SetActive(false);
         pauseMenuCanvasGroup.alpha = 0;
         pauseMenuCanvasGroup.LeanAlpha(1, 0.5f).setEaseOutBack();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0f;
+        yield return new WaitForSeconds(0.1f);
     }
     
 }
