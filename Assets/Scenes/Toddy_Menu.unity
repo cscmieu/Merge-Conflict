@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: plant_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8405514901628242609, guid: 1cd4a9e17c67b9641aa507f86d19c7df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9218221822711795723, guid: 1cd4a9e17c67b9641aa507f86d19c7df, type: 3}
       propertyPath: m_LocalScale.x
       value: 50
@@ -561,7 +565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &417839633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -908,7 +912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &623100365
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1090,7 +1094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &706997853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1604,6 +1608,10 @@ PrefabInstance:
     - target: {fileID: 3026225245733771177, guid: 82e74abfa6f77834a830db31f3d8e906, type: 3}
       propertyPath: m_Name
       value: PlayerCommit 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026225245733771177, guid: 82e74abfa6f77834a830db31f3d8e906, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9137086282480808108, guid: 82e74abfa6f77834a830db31f3d8e906, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2862,7 +2870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1118492596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2967,7 +2975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1155944576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5062,7 +5070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1932966473
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -444,7 +444,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2782523510038022034, guid: aa01d4c277b7dd045acaf26abae5df63, type: 3}
       propertyPath: m_Name
-      value: '[PAUSE MENU]'
+      value: '[PAUSE&WIN MENU]'
       objectReference: {fileID: 0}
     - target: {fileID: 3546120543024761726, guid: aa01d4c277b7dd045acaf26abae5df63, type: 3}
       propertyPath: m_Pivot.x
@@ -525,6 +525,10 @@ PrefabInstance:
     - target: {fileID: 3546120543024761726, guid: aa01d4c277b7dd045acaf26abae5df63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610755779477174765, guid: aa01d4c277b7dd045acaf26abae5df63, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.115967
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
