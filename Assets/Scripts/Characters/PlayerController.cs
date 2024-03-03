@@ -61,8 +61,8 @@ namespace Characters
 
         private void Update()
         {
-            if (PauseController.isPaused) return;
             ItemManager.hasAccessToPause = _hasAccessToPause;
+            if (PauseController.isPaused) return;
             cannotMove                   = ItemManager.cannotMove;
             Rotate();
             CheckGround();
