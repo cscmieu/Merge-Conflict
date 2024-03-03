@@ -21,7 +21,7 @@ namespace Characters
         [Tooltip("mouseSensitivity")]
         public int MouseSensitivity = 1;
 
-        [Range(-45, -20)]
+        [Range(-45, 0)]
         [Tooltip("minAngleCamera")]
         public int MinLookAngle = -30;
 

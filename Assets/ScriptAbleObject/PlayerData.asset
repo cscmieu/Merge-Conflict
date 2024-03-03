@@ -16,6 +16,6 @@ MonoBehaviour:
   JumpForce: 7
   ForceGravity: 40
   MouseSensitivity: 1
-  MinLookAngle: -30
+  MinLookAngle: -10
   MaxLookAngle: 35
   invertCamera: 0
