@@ -20,7 +20,6 @@ namespace Menu
 
         public void Open()
         {
-            if (!ItemManager.hasAccessToPause) return;
             gameObject.SetActive(true);
             transform.LeanScale(Vector2.one, 0.8f).setEaseOutBack();
             StartCoroutine(OnAnimationCoroutine());
