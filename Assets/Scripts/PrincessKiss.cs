@@ -8,6 +8,6 @@ public class PrincessKiss : MonoBehaviour
         if (other.gameObject.layer != 7) return;
         //WIN
         winScreen.SetActive(true);  
-        Time.timeScale = 0f;
+        PauseController.isPaused = true;
     }
 }

@@ -27,6 +27,7 @@ public class GitActivate : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         gitPanel.SetActive(false);
+        PauseController.isPaused = false;
     }
 
     private void OpenGitPanel()
@@ -34,5 +35,6 @@ public class GitActivate : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         gitPanel.SetActive(true);
+        PauseController.isPaused = true;
     }
 }
