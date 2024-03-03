@@ -271,11 +271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debb1149eeae70e40997ef1949f3b8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonDescriptionData:
-    title: Commit de Fou
-    pseudo: Juvisy
-    date: 7 hours ago
-    description: Let's go guyss
+  buttonDescriptionData:
+    title: 
+    pseudo: 
+    date: 
+    description: 
     id: 0
   title: {fileID: 1049393369807963419}
   pseudo: {fileID: 6065617991016500954}
