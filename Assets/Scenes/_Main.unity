@@ -4356,6 +4356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GitWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 4007357757778269280, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
