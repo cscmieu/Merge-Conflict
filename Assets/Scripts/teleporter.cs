@@ -4,33 +4,29 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject destination;
-    [SerializeField] private GameObject backDestination;
+    [SerializeField] private List<GameObject> players;
+    [SerializeField] private Transform destination;
+    private Transform backDestination;
     
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            teleport();
-        }
+    }
 
-        else if (Input.GetKeyDown(KeyCode.Mouse1))
+    public void teleport()
+    {
+        backDestination.position = players[Loader.currentVersion-1].transform.position;
+        foreach (var player in players)
         {
-            teleportBack();
+            player.transform.position = destination.transform.position;
         }
     }
 
-    private void teleport()
+    public void teleportBack()
     {
-        backDestination.transform.position = player.transform.position;
-
-        player.transform.position = destination.transform.position;
-    }
-
-    private void teleportBack()
-    {
-        player.transform.position = backDestination.transform.position;
+        foreach (var player in players)
+        {
+            player.transform.position = backDestination.transform.position;
+        }
     }
 }

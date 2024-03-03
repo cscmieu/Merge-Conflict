@@ -33,6 +33,8 @@ namespace Characters
         private                  float      _groundCheckDistance = 0.7f;
         private static readonly  int        speed                = Animator.StringToHash("Speed");
 
+
+
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
@@ -169,5 +171,8 @@ namespace Characters
             _rigidbody.AddForce(Vector3.forward * 100f + Vector3.up * 15f, ForceMode.Impulse);
             ItemManager.cannotMove = true;
         }
+
+
     }
+
 }

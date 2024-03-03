@@ -19,6 +19,8 @@ public class Loader : MonoBehaviour
 
 
 
+    [Header("Teleporter")]
+    [SerializeField] private Teleporter tpkey;
 
     private Dictionary<int, AudioSource> musicDatabase = new();
     private List<List<int>>              musicVersions = new();
@@ -106,48 +108,6 @@ public class Loader : MonoBehaviour
             lastVersion = currentVersion;
         }
 
-        // test with numpad up to 9
-        if (Input.GetKeyDown(KeyCode.Keypad0))
-        {
-            setCurrentVersion(0);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad1))
-        {
-            setCurrentVersion(1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            setCurrentVersion(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad3))
-        {
-            setCurrentVersion(3);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad4))
-        {
-            setCurrentVersion(4);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            setCurrentVersion(5);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad6))
-        {
-            setCurrentVersion(6);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad7))
-        {
-            setCurrentVersion(7);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad8))
-        {
-            setCurrentVersion(8);
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad9))
-        {
-            setCurrentVersion(9);
-        }
-
 
     }
 
@@ -168,29 +128,37 @@ public class Loader : MonoBehaviour
 
         // Unload current map and current player
         UnloadMap(lastVersion);
-        UnloadPlayer(lastVersion);
+        UnloadPlayer();
 
         // Load map and player
         maps[versionIndex].SetActive(true);
         players[versionIndex].SetActive(true);
+
+        Application.targetFrameRate = -1;
+        LoadSkybox(0);
         switch (versionIndex)
         {
-            case 7:
+            case 6:
                 ItemManager.cannotMove = false;
                 break;
-            case 26:
+            case 10:
+                tpkey.teleport();
+                break;
+            case 25:
                 LoadSkybox(1);
                 break;
-            case 27:
+            case 26:
                 LoadSkybox(2);
                 break;
-            case 28:
+            case 27:
                 LoadSkybox(3);
                 Application.targetFrameRate = 10;
                 break;
             default:
-                LoadSkybox(0);
-                Application.targetFrameRate = -1;
+                if (lastVersion == 10)
+                {
+                    tpkey.teleportBack();
+                }
                 break;
         }
     }
@@ -203,12 +171,14 @@ public class Loader : MonoBehaviour
         maps[mapIndex].SetActive(false);
     }
 
-    private void UnloadPlayer(int playerIndex)
+    private void UnloadPlayer()
     {
-        if (playerIndex < 0 || playerIndex > maxVersion) return;
 
         // Unload the player
-        players[playerIndex].SetActive(false);
+        foreach (var player in players)
+        {
+            player.SetActive(false);
+        }
     }
 
     private void ChangeMusic(int versionIndex)

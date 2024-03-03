@@ -33,10 +33,12 @@ namespace UI.GitWindow.Scripts
             else if (id > Loader.currentVersion)
             {
                 descriptionButtonText.text = "Go to commit";
+                currentVersionText.SetActive(false);
             }
             else
             {
                 descriptionButtonText.text = "Revert to commit";
+                currentVersionText.SetActive(false);
             }
         }
     }
