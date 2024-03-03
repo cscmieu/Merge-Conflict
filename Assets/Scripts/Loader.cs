@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Loader : MonoBehaviour
@@ -13,14 +14,10 @@ public class Loader : MonoBehaviour
     [SerializeField] private List<AudioSource> musics;
     [SerializeField] private List<int> music1Versions;
     [SerializeField] private List<int> music2Versions;
+    [SerializeField] private List<int> music3Versions;
 
     [Header("Settings")]
     [SerializeField] private int startVersion;
-
-
-
-    [Header("Teleporter")]
-    [SerializeField] private Teleporter tpkey;
 
     private Dictionary<int, AudioSource> musicDatabase = new();
     private List<List<int>>              musicVersions = new();
@@ -51,6 +48,7 @@ public class Loader : MonoBehaviour
         //load the musicVersions in the musicVersions list
         musicVersions.Add(music1Versions);
         musicVersions.Add(music2Versions);
+        musicVersions.Add(music3Versions);
 
         if (musicVersions.Count != musics.Count)
         {
@@ -142,7 +140,7 @@ public class Loader : MonoBehaviour
                 ItemManager.cannotMove = false;
                 break;
             case 10:
-                tpkey.teleport();
+                ItemManager.cannotMove = true;
                 break;
             case 25:
                 LoadSkybox(1);
@@ -157,7 +155,7 @@ public class Loader : MonoBehaviour
             default:
                 if (lastVersion == 10)
                 {
-                    tpkey.teleportBack();
+                    ItemManager.cannotMove = false;
                 }
                 break;
         }
@@ -194,7 +192,6 @@ public class Loader : MonoBehaviour
         // verify if the music is already playing
         if (!musicDatabase[versionIndex].mute)
         {
-            Debug.Log("Music already playing");
             return;
         }
 

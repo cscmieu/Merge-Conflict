@@ -1043,11 +1043,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 8150073136455586520}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
-  m_Inertia: 1
+  m_Inertia: 0
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 20
   m_Viewport: {fileID: 0}
@@ -1098,10 +1098,10 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4007357757778269280}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1246747, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.12, y: 1.8849894, z: 1.8849894}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 171952065504591302}
   - {fileID: 7027600461636535759}
@@ -3169,10 +3169,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e23387240d2aa2c40b8d0d74ff7d17ac, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GitActivate, Assembly-CSharp
+        m_MethodName: CloseGitPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3245,8 +3245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -159.99974}
-  m_SizeDelta: {x: 200, y: 300}
+  m_AnchoredPosition: {x: 0, y: -677.93024}
+  m_SizeDelta: {x: 200, y: 1355.8606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1615595772602860389
 Canvas:
@@ -4479,7 +4479,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7865459943494478504}
+      - m_Target: {fileID: 4007357757778269280}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -5017,6 +5017,29 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 19h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Added a keyblade (just joking guyssss) + I'm soo proud of you people
+        !!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: I wanted to say guys it's super fiiine we are on the right way everything
+        is cool ^^.  Also I added the prefab for the key for the door you just  have
+        to put it in the level.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5218,6 +5241,26 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 39h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Gravity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: FINALLY added gravity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5594,6 +5637,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 2h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: fix
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: fixed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5791,6 +5854,27 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 48h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Initial Commit OEEE LA GAME JAM
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Let's gooo guys so excited to start this game jam with you people. 
+        I'm sure we are going to make a banger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5994,6 +6078,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 44h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Player controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: 'simple controller to start testing, ffs i hate CharacterController '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6195,6 +6299,22 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 10h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: C'est jolie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6398,6 +6518,27 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 32m ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: New Skybox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Bro look at that Skyboxxxxx it's soooo beautiful I found it on a website
+        with free assets but I forgot the name... Sry ^^
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6599,6 +6740,26 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 44h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: some tests
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6802,6 +6963,30 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 25h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Added a beautiful Character Model  with cape and all
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Nice character i found on @KayKit' itch isn't it so cooooooool ? Tell
+        me what you think about it. Also fixed the character controller so that, 
+        when you press a wrong button, like I did (I pressed f I think ?),  the character
+        can't get stuck or like glitch out of the map,  idk did it happen to you
+        guys ?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7003,6 +7188,26 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 11h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Music!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '"Worked on it all night..... going to bed  (hate on ableton)"'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7230,6 +7435,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 7m ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Added Banger to GitHoob
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Sheeeeesh guys i'm so glad of what we did, the game is so flamessss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7431,6 +7656,27 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 22h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Modif Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- add some hitbox for rocks - Work on player need tha animations @Silvec
+        - What was that bridge at the begining ?? We need to have parcours not walk'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7634,6 +7880,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 30m ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: better skybox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: it was bad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7835,6 +8101,26 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 22h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: bridge at the start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: bridge at the start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8038,6 +8324,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 1h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: enemies models
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8239,6 +8545,28 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Fixed the Princessssssssss  (because it was floating ?)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Guys I fixed the princess, she was flying ??? I think it was not correct 
+        I mean how is the player supposed to reach her ??  Anyways i put her on the
+        ground and I loe the model it looks soo good !!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8442,6 +8770,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: i don't know
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: no
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8643,6 +8991,28 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 7h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Music fixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- Stop trying to implement tings if you don''t know shit on how to
+        do it Silvec - WHY IS THE JUMP NOT WORKING ANYMORE  - You juste deleted the
+        PHYSICS !!!!! -WHO TF PUT THOSE FLOWERS EVRYWHERE ?'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8846,6 +9216,27 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 31m ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Other Skybox for nighttime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Juv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Sorry but I had to put that one it's too magnificent for me not to put
+        it in It will be for nighttime
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9048,6 +9439,28 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- Repaired everything in the controller - Made it more clear and clean 
+        - Someone as touched my menus, seems he wants to die young - what was that
+        random ragdoll on the bridge ???'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9249,6 +9662,27 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 3h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Health bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: WHY DO I HAVE TO DO UI ?!??!!?? IN UNITY ???????????  gl ending the
+        game i'm out
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9476,6 +9910,28 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 8m ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: I CAN'T DO IT ANYMORE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- WE HAVE NO DAY/NIGHT CYCLE WTF ?? - Why was the game laggy af how
+        can none of you fucking  moron don''t think of it !!! - Why do I have to
+        correct everything after each of you. Just do your job.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9677,6 +10133,29 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 11h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- Work on the UI on going - Added some package for UI  - Asked to some
+        of them to not download all the assets of a package it was a surprise for
+        some of them - Why are u guys pushing when the game is still in prefab view
+        ??'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9880,6 +10359,28 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 2h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: The Lady
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: '- Just found out you have to save the princess to end the game - You
+        have to be retarded to put it a 100 bloc under ground  - And why is she 5
+        times larger than me ? Not a pedophile game pls'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10081,6 +10582,26 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: yes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10284,6 +10805,27 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 20h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Character animations
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: At last every damn animations if anybody changes the animation controller
+        i'll actually switch team
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10486,6 +11028,27 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: Merge of branch 'main' from  https://githoob.com/toddy/IIE_JAM into
+        main
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Silv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Please can you guys stop breaking everything ?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10687,6 +11250,28 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 33h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: If you do a chracter controller and create the  jump and gravity please
+        call them in the uptate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: Toddy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: Just added the jump since someone didn't think it was necessary  and
+        deleted the flying items everywhere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10901,6 +11486,26 @@ PrefabInstance:
       propertyPath: ButtonDescriptionData.id
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 5h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: jump bridge
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.description
+      value: before princess
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11102,6 +11707,22 @@ PrefabInstance:
     - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
       propertyPath: ButtonDescriptionData.id
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.id
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.date
+      value: 43h ago
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.title
+      value: wqazesxdgtfvubynijmko
+      objectReference: {fileID: 0}
+    - target: {fileID: 8137412108729989086, guid: 9a462c9369c81e74e8ba3f5c10def306, type: 3}
+      propertyPath: buttonDescriptionData.pseudo
+      value: BdF
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
