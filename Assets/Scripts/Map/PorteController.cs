@@ -25,7 +25,6 @@ namespace Map
                 elapsedTime        += Time.deltaTime;
                 yield return null;
             }
-            // Assurer que la position finale est atteinte exactement
             transform.position = destination;
         }
     }
