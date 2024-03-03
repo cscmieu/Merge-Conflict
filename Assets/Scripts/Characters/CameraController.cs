@@ -6,47 +6,39 @@ using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform _cameraTransform;
+    [SerializeField] GameObject _parent;
 
-    public float minCamTerrainHeight = 0.15f;
-    public float smoothTime = 0.1f;
+    private float smoothTime = 10f;
     private Vector3 velocity = Vector3.zero;
 
-    private Vector3 _cameraLocalPosition;
+    private Vector3 _camera_offset;
     private RaycastHit hit;
     private bool _colliding = false;
 
     void Start()
     {
-        _cameraLocalPosition = _cameraTransform.localPosition;
+        _camera_offset = transform.localPosition;
     }
     // Update is called once per frame
     void Update()
     {
         if (_colliding)
         {
-            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z - minCamTerrainHeight), ref velocity, smoothTime);
-        }
-        Debug.DrawLine(transform.position, _cameraTransform.position);
-        if (Physics.Linecast(transform.position, _cameraTransform.position, out hit) && hit.transform.gameObject.layer != 6)
-        {
-            _cameraTransform.localPosition = new Vector3(0, 0, -Vector3.Distance(transform.position, hit.point));
+            transform.position -= smoothTime*Time.deltaTime*(transform.position-_parent.transform.position).normalized;
         }
         else
         {
-            _cameraTransform.localPosition = Vector3.Lerp(_cameraTransform.localPosition, _cameraLocalPosition, Time.deltaTime);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, _camera_offset, Time.deltaTime);
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6)
-            _colliding = true;
+        _colliding = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 6)
-            _colliding = false;
+        _colliding = false;
     }
 }

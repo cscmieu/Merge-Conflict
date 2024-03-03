@@ -52,6 +52,7 @@ MonoBehaviour:
   canJump: 1
   hasGravity: 1
   gravityMultiplier: 1
+  _hasAccessToPause: 0
   animator: {fileID: 0}
   playerData: {fileID: 11400000, guid: 94069d0161ac0dc4d8ea61f8b32ecd21, type: 2}
   rotateCamera: {fileID: 5393680854027691769}
@@ -227,8 +228,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284618752146467474}
-  - component: {fileID: 8841652006290714800}
-  - component: {fileID: 188014491824073106}
   m_Layer: 0
   m_Name: RotateCamera
   m_TagString: Untagged
@@ -252,42 +251,6 @@ Transform:
   - {fileID: 1424535870135741841}
   m_Father: {fileID: 9137086282480808108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8841652006290714800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393680854027691769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 869b0f1ea62b8d541b56f861db0bb340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cameraTransform: {fileID: 1424535870135741841}
-  minCamTerrainHeight: 0.15
-  smoothTime: 0.1
---- !u!135 &188014491824073106
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393680854027691769}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 4.2, z: -6.51}
 --- !u!1001 &4758822190545312848
 PrefabInstance:
   m_ObjectHideFlags: 0
