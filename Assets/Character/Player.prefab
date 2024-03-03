@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18f1a090f347bd4b94f248d1c84d5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerData: {fileID: 11400000, guid: 94069d0161ac0dc4d8ea61f8b32ecd21, type: 2}
-  RotateSpeed: 5
-  _rotateCamera: {fileID: 5393680854027691769}
+  canJump: 1
+  hasGravity: 1
+  playerData: {fileID: 11400000, guid: 94069d0161ac0dc4d8ea61f8b32ecd21, type: 2}
+  rotateCamera: {fileID: 5393680854027691769}
 --- !u!54 &8615355850283203145
 Rigidbody:
   m_ObjectHideFlags: 0

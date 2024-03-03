@@ -1,43 +1,47 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenOptionsMenu : MonoBehaviour
+namespace Menu
 {
-    private void Update()
+    public class OpenOptionsMenu : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        private void Update()
         {
-            Close();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Close();
+            }
         }
-    }
-    void Start()
-    {
-        transform.localScale = Vector2.zero;
-    }
 
-    public void Open()
-    {
-        gameObject.SetActive(true);
-        transform.LeanScale(Vector2.one, 0.8f).setEaseOutBack();
-        StartCoroutine(OnAnimationCoroutine());
-    }
-    
-    public void Close()
-    {
-        if (transform.localScale == Vector3.zero) return;
-        else
+        private void Start()
         {
-            
-            transform.LeanScale(Vector2.zero, 0.01f).setEaseInBack();
-            gameObject.SetActive(false);
-        }   
-    }
-    IEnumerator OnAnimationCoroutine()
-    {
-        Time.timeScale = 1f;
-        yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 0f;
-    }
+            transform.localScale = Vector2.zero;
+        }
+
+        public void Open()
+        {
+            gameObject.SetActive(true);
+            transform.LeanScale(Vector2.one, 0.8f).setEaseOutBack();
+            StartCoroutine(OnAnimationCoroutine());
+        }
     
+        public void Close()
+        {
+            if (transform.localScale == Vector3.zero) return;
+            else
+            {
+            
+                transform.LeanScale(Vector2.zero, 0.01f).setEaseInBack();
+                gameObject.SetActive(false);
+            }   
+        }
+
+        static IEnumerator OnAnimationCoroutine()
+        {
+            Time.timeScale = 1f;
+            yield return new WaitForSeconds(0.5f);
+            Time.timeScale = 0f;
+        }
+    
+    }
 }

@@ -1,57 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PorteController : MonoBehaviour
+namespace Map
 {
-    private Vector3 position = Vector3.zero;
-    private float _tempsDeDeplacement = 2f;
+    public class PorteController : MonoBehaviour
+    {
+        private float   _tempsDeDeplacement = 2f;
 
-    void Start()
-    {
-        position = transform.position;
-    }
-    void OnTriggerEnter()
-    {
-        StartCoroutine(MoveUp());
-    }
-
-/*    void OnTriggerExit()
-    {
-        StartCoroutine(MoveDown());
-    }*/
-    IEnumerator MoveUp()
-    {
-        var destination = transform.position + Vector3.up*transform.position.y* 1.5f;
-        float elapsedTime = 0f;
-        Vector3 positionInitiale = transform.position;
-
-        while (elapsedTime < _tempsDeDeplacement)
+        private void OnTriggerEnter(Collider other)
         {
-            transform.position = Vector3.Lerp(positionInitiale, destination, elapsedTime / _tempsDeDeplacement);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            if (!ItemManager.hasKey) return;
+            StartCoroutine(MoveUp());
         }
-        // Assurer que la position finale est atteinte exactement
-        transform.position = destination;
-        elapsedTime = 0f;
-    }
 
-/*    IEnumerator MoveDown()
-    {
-        var destination = position;
-        float elapsedTime = 0f;
-        Vector3 positionInitiale = transform.position;
-
-        while (elapsedTime < _tempsDeDeplacement)
+        private IEnumerator MoveUp()
         {
-            transform.position = Vector3.Lerp(positionInitiale, destination, elapsedTime / _tempsDeDeplacement);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            var position    = transform.position;
+            var destination = position + Vector3.up * (position.y * 1.5f);
+            var elapsedTime = 0f;
+
+            while (elapsedTime < _tempsDeDeplacement)
+            {
+                transform.position =  Vector3.Lerp(position, destination, elapsedTime / _tempsDeDeplacement);
+                elapsedTime        += Time.deltaTime;
+                yield return null;
+            }
+            // Assurer que la position finale est atteinte exactement
+            transform.position = destination;
         }
-        // Assurer que la position finale est atteinte exactement
-        transform.position = destination;
-        elapsedTime = 0f;
-    }*/
+    }
 }
