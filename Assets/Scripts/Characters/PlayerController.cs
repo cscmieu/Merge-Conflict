@@ -5,6 +5,8 @@ namespace Characters
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private ItemManager ItemManager;
+
         [Header("Fonctionalitées")]
         [SerializeField] private bool  canJump;
         [SerializeField] private bool  hasGravity;
@@ -102,6 +104,8 @@ namespace Characters
                 if (hit.transform.gameObject.layer != 3) return;
             }
             transform.position += _speed * Time.deltaTime * dirVect;
+
+            ItemManager.transform.position = transform.position;
         }
 
         private void Rotate()
@@ -170,6 +174,11 @@ namespace Characters
         {
             _rigidbody.AddForce(Vector3.forward * 100f + Vector3.up * 15f, ForceMode.Impulse);
             ItemManager.cannotMove = true;
+        }  
+
+        private void OnEnable() 
+        {
+            transform.position = ItemManager.transform.position;
         }
 
 
