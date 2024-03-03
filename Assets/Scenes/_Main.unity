@@ -4518,40 +4518,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 273508000}
     m_Modifications:
     - target: {fileID: 1043258133954703749, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1043258133954703749, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 273508001}
-    - target: {fileID: 1043258133954703749, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseGitPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1043258133954703749, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GitActivate, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2243288357238504422, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3045582080398928555, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: buttonDescriptionData.title
-      value: ljjh
-      objectReference: {fileID: 0}
-    - target: {fileID: 3283740013927498713, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: buttonDescriptionData.title
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 4007357757778269280, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Name
       value: GitWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007357757778269280, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Pivot.x
@@ -4584,18 +4556,6 @@ PrefabInstance:
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8849894
-      objectReference: {fileID: 0}
-    - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8849894
       objectReference: {fileID: 0}
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4644,46 +4604,6 @@ PrefabInstance:
     - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6234393145403422055, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6536417860782793858, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: buttonDescriptionData.title
-      value: zret
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1999675986}
-    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 7392628153698938324, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: buttonDescriptionData.title
-      value: end
-      objectReference: {fileID: 0}
-    - target: {fileID: 7675240462374972393, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_Inertia
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7675240462374972393, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_Horizontal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150073136455586520, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1355.8606
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150073136455586520, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -677.93024
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861412392931219229, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
-      propertyPath: buttonDescriptionData.title
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
