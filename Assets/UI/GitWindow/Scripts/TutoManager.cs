@@ -1,50 +1,56 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutoManager : MonoBehaviour
+namespace UI.GitWindow.Scripts
 {
-    [Header("Tuto scenes")]
-    [SerializeField] private List<GameObject> tutoScenes;
-
-
-    private bool isTutoActive = true;
-
-    // Start is called before the first frame update
-    void Start()
+    public class TutoManager : MonoBehaviour
     {
-        if (isTutoActive)
+        
+        [Header("Tutorial scenes")]
+        [SerializeField] private List<GameObject> tutoScenes;
+
+        private bool _firstCommitSelected;
+        private bool _secondCommitSelected;
+        private bool _isTutoActive = true;
+
+        private void Start()
         {
+            if (!_isTutoActive) return;
             tutoScenes[0].SetActive(true);
-            isTutoActive = false;
+            _isTutoActive = false;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && tutoScenes[0].activeSelf)
+        private void Update()
         {
-            NextTuto1();
+            if (_firstCommitSelected && tutoScenes[1].activeSelf)
+            {
+                NextTuto2();
+            }
+            else if (_secondCommitSelected && tutoScenes[2].activeSelf)
+            {
+                tutoScenes[2].SetActive(false);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && tutoScenes[1].activeSelf)
-        {
-            NextTuto2();
-        }
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && tutoScenes[2].activeSelf)
-        {
-            tutoScenes[2].SetActive(false);
-        }
-    }
 
-    private void NextTuto1()
-    {
-        tutoScenes[0].SetActive(false);
-        tutoScenes[1].SetActive(true);
-    }
-    private void NextTuto2()
-    {
-        tutoScenes[1].SetActive(false);
-        tutoScenes[2].SetActive(true);
+        public void NextTuto1()
+        {
+            tutoScenes[0].SetActive(false);
+            tutoScenes[1].SetActive(true);
+        }
+        private void NextTuto2()
+        {
+            tutoScenes[1].SetActive(false);
+            tutoScenes[2].SetActive(true);
+        }
+
+        public void SetFirstCommit()
+        {
+            _firstCommitSelected = true;
+        }
+
+        public void SetSecondCommit()
+        {
+            _secondCommitSelected = true;
+        }
     }
 }
