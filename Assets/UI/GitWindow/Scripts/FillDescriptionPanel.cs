@@ -10,9 +10,9 @@ namespace UI.GitWindow.Scripts
         public TextMeshProUGUI idText;
         public void RefreshDescriptionPanel()
         {
-            title.text       = GetComponent<ButtonDescription>().ButtonDescriptionData.title;
-            description.text = GetComponent<ButtonDescription>().ButtonDescriptionData.description;
-            idText.text      = "ID : " + GetComponent<ButtonDescription>().ButtonDescriptionData.id;
+            title.text       = GetComponent<ButtonDescription>().buttonDescriptionData.title;
+            description.text = GetComponent<ButtonDescription>().buttonDescriptionData.description;
+            idText.text      = "ID : " + GetComponent<ButtonDescription>().buttonDescriptionData.id;
         }
     }
 }

@@ -6,13 +6,13 @@ namespace UI.GitWindow.Scripts
 {
     public class DescriptionButton : MonoBehaviour
     {
-        public GameObject                currentVersion ;
+        public GameObject      currentVersionText;
         public TextMeshProUGUI descriptionButtonText;
-        public int                   id;
+        public int             id;
 
         private void Start()
         {
-            currentVersion.SetActive(false);
+            currentVersionText.SetActive(false);
         }
 
         public void SwitchVersion()
@@ -24,10 +24,11 @@ namespace UI.GitWindow.Scripts
         public void RefreshDescriptionButton(int newID)
         {
             id = newID;
+            descriptionButtonText.gameObject.SetActive(true);
             if (id == Loader.currentVersion)
             {
-                currentVersion.SetActive(true);
-                descriptionButtonText.text = "";
+                currentVersionText.SetActive(true);
+                descriptionButtonText.gameObject.SetActive(false);
             }
             else if (id > Loader.currentVersion)
             {
