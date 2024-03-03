@@ -59,5 +59,10 @@ public class PauseController : MonoBehaviour
         Time.timeScale = 0f;
         yield return new WaitForSeconds(0.1f);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     
 }
