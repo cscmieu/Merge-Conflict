@@ -7,7 +7,7 @@ public class BridgeBumb : MonoBehaviour
     {
         if (other.transform.TryGetComponent<PlayerController>(out var feur))
         {
-            feur.Bump();
+/*            feur.Bump();*/
         }
     }
 }
