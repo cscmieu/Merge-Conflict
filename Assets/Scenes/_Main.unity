@@ -5257,6 +5257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805311982}
   - component: {fileID: 1805311981}
+  - component: {fileID: 1805311983}
   m_Layer: 0
   m_Name: GOD
   m_TagString: Untagged
@@ -5368,6 +5369,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805311983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805311980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23387240d2aa2c40b8d0d74ff7d17ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gitPanel: {fileID: 1999675986}
 --- !u!1001 &1809585976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5783,6 +5797,22 @@ PrefabInstance:
     - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_Colors.m_SelectedColor.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1805311983}
+    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseGitPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735679461450540873, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GitActivate, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7066027897035268013, guid: c9cf6de3fc22f894ca8a5860ae572d1c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
