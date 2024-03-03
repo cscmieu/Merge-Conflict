@@ -25,6 +25,7 @@ public class AnimationForOptionsMenu : MonoBehaviour
     {
         background.LeanAlpha(0, 0.5f).setEaseOutBack().setOnComplete(OnComplete);
         hotBar.SetActive(false);
+        gameObject.SetActive(false);
     }
     
     void OnComplete()

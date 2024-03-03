@@ -30,14 +30,13 @@ namespace Menu
             if (transform.localScale == Vector3.zero) return;
             else
             {
-            
                 transform.LeanScale(Vector2.zero, 0.01f).setEaseInBack();
                 gameObject.SetActive(false);
             }   
         }
 
         static IEnumerator OnAnimationCoroutine()
-        {
+        {   
             Time.timeScale = 1f;
             yield return new WaitForSeconds(0.5f);
             Time.timeScale = 0f;
