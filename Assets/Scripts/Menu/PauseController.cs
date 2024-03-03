@@ -12,7 +12,7 @@ public class PauseController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Loader.currentVersion > 16)
+            if (Loader.currentVersion < 17 )
             {
                 return;
             }
@@ -42,6 +42,11 @@ public class PauseController : MonoBehaviour
     }
     public void PauseGame()
     {
+        StartCoroutine(PauseGameCoroutine());
+    }
+    
+    IEnumerator PauseGameCoroutine()
+    {
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -49,12 +54,7 @@ public class PauseController : MonoBehaviour
         winScreen.SetActive(false);
         pauseMenuCanvasGroup.alpha = 0;
         pauseMenuCanvasGroup.LeanAlpha(1, 0.5f).setEaseOutBack();
-        StartCoroutine(PauseGameCoroutine());
-    }
-    
-    IEnumerator PauseGameCoroutine()
-    {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         Time.timeScale = 0f;
     }
     
