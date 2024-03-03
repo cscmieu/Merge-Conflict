@@ -1472,50 +1472,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1975975488
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1975975490}
-  - component: {fileID: 1975975489}
-  m_Layer: 0
-  m_Name: SkyBoxManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1975975489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975975488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e274eb8b34a7040449e7d881d5428214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1975975490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975975488}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3356256, y: 0.15260121, z: -0.55636024}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1139788668314922540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1586,6 +1542,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: startVersion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: maps.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: musics.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
       propertyPath: maps.Array.data[0]
       value: 
       objectReference: {fileID: 399477596}
@@ -1597,6 +1565,14 @@ PrefabInstance:
       propertyPath: maps.Array.data[2]
       value: 
       objectReference: {fileID: 467478558}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: players.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: skyboxes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
       propertyPath: musics.Array.data[0]
       value: 
@@ -1616,7 +1592,43 @@ PrefabInstance:
     - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
       propertyPath: players.Array.data[2]
       value: 
-      objectReference: {fileID: 1453160744}
+      objectReference: {fileID: 1808213876}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: skyboxes.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99a400087584f4263b1a8979d6007ad4, type: 2}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: skyboxes.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 12ccb828343c3405fb94289774b51aad, type: 2}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: skyboxes.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3cf976aaf2c1904f862d30481bb1be9, type: 2}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: skyboxes.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab675e6698bde46fd87143fb0d7580cb, type: 2}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: music1Versions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: music2Versions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: music1Versions.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: music1Versions.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057058874527096677, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
+      propertyPath: music2Versions.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5668638306251228697, guid: 17434130c8d69c44f833a446d51d27aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -253.71657
@@ -1679,4 +1691,3 @@ SceneRoots:
   - {fileID: 494109000}
   - {fileID: 775236315}
   - {fileID: 1139788668314922540}
-  - {fileID: 1975975490}
