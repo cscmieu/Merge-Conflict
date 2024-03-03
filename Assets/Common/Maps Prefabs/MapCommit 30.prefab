@@ -1026,6 +1026,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2340664313443370155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3525544457708016583}
+  - component: {fileID: 3179728087728204906}
+  - component: {fileID: 1578653265890590489}
+  m_Layer: 3
+  m_Name: tuto_active
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3525544457708016583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340664313443370155}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.007424968, z: -0, w: 0.99997246}
+  m_LocalPosition: {x: 9.829193, y: 1.3662639, z: 52.571426}
+  m_LocalScale: {x: 3.1871, y: 1, z: 2.5550747}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 566868699606703866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.851, z: 0}
+--- !u!65 &3179728087728204906
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340664313443370155}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.17, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1578653265890590489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340664313443370155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e558d486922469345bb388573a38aa68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutoPanel: {fileID: 0}
 --- !u!1 &2460016670808467190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1248,7 @@ Transform:
   - {fileID: 3998462425945278540}
   - {fileID: 7336655233114807789}
   - {fileID: 8432409358928645026}
+  - {fileID: 3525544457708016583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2835969735202206615
@@ -2940,6 +3008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09bebcc221f30a4192f8ccb4f9682ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winScreen: {fileID: 0}
 --- !u!135 &3654072694439410973
 SphereCollider:
   m_ObjectHideFlags: 0

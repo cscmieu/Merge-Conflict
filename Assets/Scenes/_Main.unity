@@ -1101,6 +1101,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5168354401010237276, guid: 4d82ddd7d720cd649af604e841acac71, type: 3}
+      propertyPath: far clip plane
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8615355850283203145, guid: 4d82ddd7d720cd649af604e841acac71, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -3268,73 +3272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50ab627695d1774c8e3f2da4451202a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1257134540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1257134542}
-  - component: {fileID: 1257134541}
-  - component: {fileID: 1257134543}
-  m_Layer: 3
-  m_Name: tuto_active
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1257134541
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257134540}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.17, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1257134542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257134540}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.007424968, z: -0, w: 0.99997246}
-  m_LocalPosition: {x: 306, y: 3.33, z: 150.77}
-  m_LocalScale: {x: 3.1871, y: 1, z: 2.5550752}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0.851, z: 0}
---- !u!114 &1257134543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257134540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e558d486922469345bb388573a38aa68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutoPanel: {fileID: 1233946045}
 --- !u!1001 &1278645342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3907,6 +3844,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 138197386}
+    - target: {fileID: 2716281734903102513, guid: 9b86302c7a0b7d845948b5dcdca2d3a6, type: 3}
+      propertyPath: hasGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2716281734903102513, guid: 9b86302c7a0b7d845948b5dcdca2d3a6, type: 3}
       propertyPath: ItemManager
       value: 
@@ -6391,6 +6332,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5168354401010237276, guid: 8cc7306f127376c49a8e5bca12aada51, type: 3}
+      propertyPath: far clip plane
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 9137086282480808108, guid: 8cc7306f127376c49a8e5bca12aada51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.48999
@@ -6717,7 +6662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168354401010237276, guid: 4aef20ba92179174289d52c46f4a8c4d, type: 3}
       propertyPath: far clip plane
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 9137086282480808108, guid: 4aef20ba92179174289d52c46f4a8c4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6925,13 +6870,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1578653265890590489, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
+      propertyPath: tutoPanel
+      value: 
+      objectReference: {fileID: 1233946045}
     - target: {fileID: 2822557710825564645, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
       propertyPath: m_Name
       value: MapCommit 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2822557710825564645, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7199,5 +7144,4 @@ SceneRoots:
   - {fileID: 1030127620}
   - {fileID: 273508000}
   - {fileID: 1542112180}
-  - {fileID: 1257134542}
   - {fileID: 1769850446}
