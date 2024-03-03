@@ -6,6 +6,7 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private CanvasGroup pauseMenuCanvasGroup;
+    [SerializeField] private GameObject winScreen;
     public static bool isPaused = false;
     private void Update()
     {
@@ -45,6 +46,7 @@ public class PauseController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenu.SetActive(true);
+        winScreen.SetActive(false);
         pauseMenuCanvasGroup.alpha = 0;
         pauseMenuCanvasGroup.LeanAlpha(1, 0.5f).setEaseOutBack();
         StartCoroutine(PauseGameCoroutine());

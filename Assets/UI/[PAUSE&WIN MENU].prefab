@@ -484,11 +484,11 @@ GameObject:
   - component: {fileID: 6752213011631594229}
   m_Layer: 5
   m_Name: Winning Panel
-  m_TagString: Untagged
+  m_TagString: Winning Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6119638839501039911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3404,7 +3404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.116028, y: -10.116211}
+  m_AnchoredPosition: {x: -10.115967, y: -10.116211}
   m_SizeDelta: {x: 316.9734, y: 213.5636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5723950338955941
