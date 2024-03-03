@@ -53,7 +53,6 @@ namespace Characters
             Cursor.lockState = CursorLockMode.Locked; // Masque le curseur de la souris
             if (rotateCamera == null) Debug.LogError("l'objet vide pour tourner la camera n'est pas SerializeField");
             
-            animator = GetComponent<Animator>();
             animator.SetFloat("Speed", 0);
             
         }
