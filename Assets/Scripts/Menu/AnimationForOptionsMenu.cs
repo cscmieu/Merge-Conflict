@@ -20,6 +20,7 @@ public class AnimationForOptionsMenu : MonoBehaviour
         background.alpha = 0;
         background.LeanAlpha(1, 0.5f).setEaseOutBack();
         StartCoroutine(OnEnableCoroutine());
+        hotBar.SetActive(true);
     }
     
     public void Close()
