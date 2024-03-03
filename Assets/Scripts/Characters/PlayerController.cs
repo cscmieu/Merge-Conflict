@@ -76,8 +76,12 @@ namespace Characters
         {
             var dirVertical   = Input.GetAxisRaw("Vertical");
             var dirHorizontal = Input.GetAxisRaw("Horizontal");
-            if (dirHorizontal == 0f && dirVertical == 0f) return;
-
+            if (dirHorizontal == 0f && dirVertical == 0f)
+            {
+                animator.SetFloat("Speed", 0); 
+                return;
+            }
+            animator.SetFloat("Speed", 0.5f);
             var dirVect = (_transform.forward * dirVertical + _transform.right * dirHorizontal).normalized;
 
             var vectUp = Vector3.up * 0.45f;
@@ -87,10 +91,7 @@ namespace Characters
             {
                 if (hit.transform.gameObject.layer != 3) return;
             }
-            
-
             transform.position += _speed * Time.deltaTime * dirVect;
-            Debug.Log(_speed * Time.deltaTime * dirVect);
         }
 
         private void Rotate()
@@ -148,12 +149,12 @@ namespace Characters
             _isGrounded = Physics.Raycast(origin, direction, _groundCheckDistance);
             if (_isGrounded)
             {
-                animator.SetBool("isFalling", true);
+                animator.SetBool("isFalling", false);
+                animator.SetBool("isJumping", false);
             }
             else
             {
-                animator.SetBool("isFalling", false);
-                animator.SetBool("isJumping", false);
+                animator.SetBool("isFalling", true);
             }
         }
     }
