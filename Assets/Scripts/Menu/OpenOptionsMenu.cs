@@ -41,6 +41,17 @@ namespace Menu
             yield return new WaitForSeconds(0.5f);
             Time.timeScale = 0f;
         }
+        public void SwitchMode()
+        {
+            if (gameObject.activeSelf)
+            {
+                Close();
+            }
+            else
+            {
+                Open();
+            }
+        }
     
     }
 }
