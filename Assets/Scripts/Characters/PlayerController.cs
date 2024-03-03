@@ -73,10 +73,11 @@ namespace Characters
             var dirVect = (_transform.forward * dirVertical + _transform.right * dirHorizontal).normalized;
 
             var vectUp = Vector3.up * 0.45f;
+            RaycastHit hit;
             Debug.DrawRay(_transform.position + vectUp, dirVect, Color.red, 1f);
-            if (Physics.Raycast(_transform.position + vectUp, dirVect, 1))
+            if (Physics.Raycast(_transform.position + vectUp, dirVect, out hit, 1))
             {
-                return;
+                if (hit.transform.gameObject.layer != 3) return;
             }
 
             transform.position += _speed * Time.deltaTime * dirVect;
