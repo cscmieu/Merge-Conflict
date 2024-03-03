@@ -14,6 +14,7 @@ public class Loader : MonoBehaviour
     [SerializeField] private List<AudioSource> musics;
     [SerializeField] private List<int> music1Versions;
     [SerializeField] private List<int> music2Versions;
+    [SerializeField] private List<int> music3Versions;
 
     [Header("Settings")]
     [SerializeField] private int startVersion;
@@ -47,6 +48,7 @@ public class Loader : MonoBehaviour
         //load the musicVersions in the musicVersions list
         musicVersions.Add(music1Versions);
         musicVersions.Add(music2Versions);
+        musicVersions.Add(music3Versions);
 
         if (musicVersions.Count != musics.Count)
         {
@@ -190,7 +192,6 @@ public class Loader : MonoBehaviour
         // verify if the music is already playing
         if (!musicDatabase[versionIndex].mute)
         {
-            Debug.Log("Music already playing");
             return;
         }
 
