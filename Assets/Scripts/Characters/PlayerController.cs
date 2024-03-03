@@ -61,6 +61,7 @@ namespace Characters
 
         private void Update()
         {
+            if (PauseController.isPaused) return;
             ItemManager.hasAccessToPause = _hasAccessToPause;
             cannotMove                   = ItemManager.cannotMove;
             Rotate();
@@ -69,6 +70,7 @@ namespace Characters
 
         private void FixedUpdate()
         {
+            if (PauseController.isPaused) return;
             Jump();
             Move();
             if (!_isGrounded)
@@ -92,6 +94,7 @@ namespace Characters
 
             var vectUp = Vector3.up * 0.45f;
             RaycastHit hit;
+
             Debug.DrawRay(_transform.position + vectUp, dirVect, Color.red, 1f);
             if (Physics.Raycast(_transform.position + vectUp, dirVect, out hit, 1))
             {
