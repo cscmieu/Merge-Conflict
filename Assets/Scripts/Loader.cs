@@ -15,6 +15,7 @@ public class Loader : MonoBehaviour
     [SerializeField] private List<int> music1Versions;
     [SerializeField] private List<int> music2Versions;
     [SerializeField] private List<int> music3Versions;
+    [SerializeField] private List<int> music4Versions;
 
     [Header("Settings")]
     [SerializeField] private int startVersion;
@@ -49,6 +50,7 @@ public class Loader : MonoBehaviour
         musicVersions.Add(music1Versions);
         musicVersions.Add(music2Versions);
         musicVersions.Add(music3Versions);
+        musicVersions.Add(music4Versions);
 
         if (musicVersions.Count != musics.Count)
         {
