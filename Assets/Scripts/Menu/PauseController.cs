@@ -11,7 +11,11 @@ public class PauseController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (optionsMenu.activeSelf)
+            if (Loader.currentVersion > 16)
+            {
+                return;
+            }
+            else if (optionsMenu.activeSelf)
             {
                 return;
             }
