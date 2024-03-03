@@ -15,10 +15,11 @@ public class GitActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             OpenGitPanel();
         }
+
     }
 
 

@@ -8,6 +8,8 @@ public class TUTO : MonoBehaviour
 
     private bool hasBeenActivated = false;
 
+    private bool IsIn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +23,36 @@ public class TUTO : MonoBehaviour
         {
             tutoPanel.SetActive(false);
         }
+
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && !hasBeenActivated && IsIn)
+            {
+                tutoPanel.SetActive(true);
+
+                hasBeenActivated = true;
+            }
     }
 
     private void OnTriggerEnter(Collider other) 
     {
-        if (hasBeenActivated)
+
+        if (other.gameObject.layer == 7)
         {
-            return;
+            IsIn = true;
         }
+        
+    }
 
-        tutoPanel.SetActive(true);
+    private void OnTriggerExit(Collider other) 
+    {
 
-        hasBeenActivated = true;
+        if (other.gameObject.layer == 7)
+        {
+            IsIn = false;
+        }
+        
     }
 }
