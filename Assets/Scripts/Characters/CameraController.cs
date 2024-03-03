@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
     {
         if (_colliding)
         {
+            if ((transform.position - _parent.transform.position).sqrMagnitude < 0.5f) return;
             transform.position -= smoothTime*Time.deltaTime*(transform.position-_parent.transform.position).normalized;
         }
         else

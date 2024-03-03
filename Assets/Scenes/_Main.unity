@@ -965,7 +965,7 @@ Transform:
   m_GameObject: {fileID: 389224839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.79, y: 0, z: 36.97}
+  m_LocalPosition: {x: 281.5, y: 0, z: 184.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1258,6 +1258,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2822557710825564645, guid: a12cc3205da32ef42a78a6d251ea4f04, type: 3}
   m_PrefabInstance: {fileID: 432949172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &434280987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604146817007519643, guid: aa01d4c277b7dd045acaf26abae5df63, type: 3}
+  m_PrefabInstance: {fileID: 1769850446}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &478025065 stripped
 MonoBehaviour:
@@ -6878,6 +6883,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapCommit 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3654072694439410973, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
+      propertyPath: m_Radius
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654072694439410973, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130138151113505929, guid: fa8b3ed2c291b7046a6915611ee704f6, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 434280987}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6972,6 +6989,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3654072694439410973, guid: 213b807a9662cb24b91101eb01076f54, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120640694461957799, guid: 213b807a9662cb24b91101eb01076f54, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130138151113505929, guid: 213b807a9662cb24b91101eb01076f54, type: 3}
+      propertyPath: winScreen
+      value: 
+      objectReference: {fileID: 434280987}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
