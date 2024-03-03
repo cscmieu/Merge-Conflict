@@ -6,6 +6,7 @@ public class PauseController : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private CanvasGroup pauseMenuCanvasGroup;
+    public bool isPaused = false;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -27,6 +28,7 @@ public class PauseController : MonoBehaviour
     
     public void ResumeGame()
     {
+        isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenu.SetActive(false);
@@ -35,6 +37,7 @@ public class PauseController : MonoBehaviour
     }
     public void PauseGame()
     {
+        isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         pauseMenu.SetActive(true);
