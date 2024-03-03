@@ -9,6 +9,10 @@ namespace Characters
         [SerializeField] private bool canJump;
         [SerializeField] private bool  hasGravity;
         [SerializeField] private float gravityMultiplier = 1;
+
+        public Animator animator;
+        private bool isGrounded;
+        private bool isJumping;
         
         
         [Header("Components")]
@@ -45,6 +49,10 @@ namespace Characters
             
             Cursor.lockState = CursorLockMode.Locked; // Masque le curseur de la souris
             if (rotateCamera == null) Debug.LogError("l'objet vide pour tourner la camera n'est pas SerializeField");
+            
+            animator = GetComponent<Animator>();
+            animator.SetFloat("Speed", 0);
+            
         }
 
 
@@ -79,8 +87,10 @@ namespace Characters
             {
                 if (hit.transform.gameObject.layer != 3) return;
             }
+            
 
             transform.position += _speed * Time.deltaTime * dirVect;
+            Debug.Log(_speed * Time.deltaTime * dirVect);
         }
 
         private void Rotate()
@@ -122,6 +132,7 @@ namespace Characters
             if (!canJump) return;
             if (Input.GetButton("Jump"))
             {
+                animator.SetBool("isJumping", true);
                 //Apply a force to this Rigidbody in direction of this GameObjects up axis
                 _rigidbody.AddForce(Vector3.up * (_jumpForce * _rigidbody.mass), ForceMode.Impulse);
             }
@@ -135,6 +146,15 @@ namespace Characters
 
             Debug.DrawRay(origin, direction);
             _isGrounded = Physics.Raycast(origin, direction, _groundCheckDistance);
+            if (_isGrounded)
+            {
+                animator.SetBool("isFalling", true);
+            }
+            else
+            {
+                animator.SetBool("isFalling", false);
+                animator.SetBool("isJumping", false);
+            }
         }
     }
 }
