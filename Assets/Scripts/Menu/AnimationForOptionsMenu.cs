@@ -5,6 +5,7 @@ public class AnimationForOptionsMenu : MonoBehaviour
 {
     public CanvasGroup background;
     public GameObject hotBar;
+    public GameObject mainMenu;
 
     private void Update()
     {
@@ -23,9 +24,12 @@ public class AnimationForOptionsMenu : MonoBehaviour
     
     public void Close()
     {
+        StartCoroutine(OnEnableCoroutine());
         background.LeanAlpha(0, 0.5f).setEaseOutBack().setOnComplete(OnComplete);
         hotBar.SetActive(false);
+        mainMenu.SetActive(true);
         gameObject.SetActive(false);
+        
     }
     
     void OnComplete()

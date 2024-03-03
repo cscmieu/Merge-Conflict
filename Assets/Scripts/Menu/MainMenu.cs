@@ -9,6 +9,8 @@ namespace Menu
         public void PlayGame()
         {
             StartCoroutine(OnStartCoroutine());
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         public void QuitGame()
         {
