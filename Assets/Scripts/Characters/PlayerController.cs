@@ -5,10 +5,12 @@ namespace Characters
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerController : MonoBehaviour
     {
-        [Header("Fonctionalitées")] 
-        [SerializeField] private bool canJump;
+        [Header("Fonctionalitées")]
+        [SerializeField] private bool  canJump;
         [SerializeField] private bool  hasGravity;
         [SerializeField] private float gravityMultiplier = 1;
+        [SerializeField] private bool  _hasAccessToPause;
+        private                  bool  cannotMove;
 
         public Animator animator;
         private bool isGrounded;
@@ -29,6 +31,7 @@ namespace Characters
         private                  bool       _isGrounded = true;
         private                  Transform  _transform;
         private                  float      _groundCheckDistance = 0.7f;
+        private static readonly  int        speed                = Animator.StringToHash("Speed");
 
         private void Awake()
         {
@@ -58,6 +61,8 @@ namespace Characters
 
         private void Update()
         {
+            ItemManager.hasAccessToPause = _hasAccessToPause;
+            cannotMove                   = ItemManager.cannotMove;
             Rotate();
             CheckGround();
         }
@@ -74,14 +79,15 @@ namespace Characters
 
         private void Move()
         {
+            if (cannotMove) return;
             var dirVertical   = Input.GetAxisRaw("Vertical");
             var dirHorizontal = Input.GetAxisRaw("Horizontal");
             if (dirHorizontal == 0f && dirVertical == 0f)
             {
-                animator.SetFloat("Speed", 0); 
+                animator.SetFloat(speed, 0); 
                 return;
             }
-            animator.SetFloat("Speed", 0.5f);
+            animator.SetFloat(speed, 0.5f);
             var dirVect = (_transform.forward * dirVertical + _transform.right * dirHorizontal).normalized;
 
             var vectUp = Vector3.up * 0.45f;
@@ -131,12 +137,10 @@ namespace Characters
         {
             if (!_isGrounded) return;
             if (!canJump) return;
-            if (Input.GetButton("Jump"))
-            {
-                animator.SetBool("isJumping", true);
-                //Apply a force to this Rigidbody in direction of this GameObjects up axis
-                _rigidbody.AddForce(Vector3.up * (_jumpForce * _rigidbody.mass), ForceMode.Impulse);
-            }
+            if (!Input.GetButton("Jump")) return;
+            animator.SetBool("isJumping", true);
+            //Apply a force to this Rigidbody in direction of this GameObjects up axis
+            _rigidbody.AddForce(Vector3.up * (_jumpForce * _rigidbody.mass), ForceMode.Impulse);
         }
 
         private void CheckGround()
@@ -156,6 +160,12 @@ namespace Characters
             {
                 animator.SetBool("isFalling", true);
             }
+        }
+
+        public void Bump()
+        {
+            _rigidbody.AddForce(Vector3.forward * 100f + Vector3.up * 15f, ForceMode.Impulse);
+            ItemManager.cannotMove = true;
         }
     }
 }

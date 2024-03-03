@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2716281734903102513}
   - component: {fileID: 8615355850283203145}
   - component: {fileID: 3114769060604376956}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerCommit 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,8 @@ MonoBehaviour:
   canJump: 0
   hasGravity: 0
   gravityMultiplier: 0
+  _hasAccessToPause: 0
+  animator: {fileID: 0}
   playerData: {fileID: 11400000, guid: 94069d0161ac0dc4d8ea61f8b32ecd21, type: 2}
   rotateCamera: {fileID: 5393680854027691769}
 --- !u!54 &8615355850283203145
@@ -114,7 +116,7 @@ GameObject:
   - component: {fileID: 7641263120980498728}
   - component: {fileID: 482753228842852725}
   - component: {fileID: 5522432822806610753}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +199,7 @@ GameObject:
   - component: {fileID: 6927432723348688230}
   - component: {fileID: 7380218899026188251}
   - component: {fileID: 7544702921375903128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +283,7 @@ GameObject:
   - component: {fileID: 1424535870135741841}
   - component: {fileID: 5168354401010237276}
   - component: {fileID: 7333180507542936413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -371,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4284618752146467474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RotateCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

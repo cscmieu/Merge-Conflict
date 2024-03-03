@@ -750,11 +750,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 92ff8d3b-500c-4de0-a621-56df0435483a
+  cloudProjectId: 2a473a9e-9fb8-4297-a77f-9f8c98a5df95
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: INT_JAM
-  organizationId: bradefaire
+  organizationId: cscmieu
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

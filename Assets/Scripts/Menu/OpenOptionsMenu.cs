@@ -20,6 +20,7 @@ namespace Menu
 
         public void Open()
         {
+            if (!ItemManager.hasAccessToPause) return;
             gameObject.SetActive(true);
             transform.LeanScale(Vector2.one, 0.8f).setEaseOutBack();
             StartCoroutine(OnAnimationCoroutine());
@@ -35,7 +36,7 @@ namespace Menu
             }   
         }
 
-        static IEnumerator OnAnimationCoroutine()
+        private static IEnumerator OnAnimationCoroutine()
         {   
             Time.timeScale = 1f;
             yield return new WaitForSeconds(0.5f);

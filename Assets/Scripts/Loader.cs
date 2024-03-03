@@ -7,6 +7,7 @@ public class Loader : MonoBehaviour
     [Header("Objects to load")]
     [SerializeField] private List<GameObject> maps;
     [SerializeField] private List<GameObject> players;
+    [SerializeField] private List<Material>   skyboxes;
 
     [Header("Music and their versions")]
     [SerializeField] private List<AudioSource> musics;
@@ -14,7 +15,7 @@ public class Loader : MonoBehaviour
     [SerializeField] private List<int> music2Versions;
 
     [Header("Settings")]
-    [SerializeField] private int startVersion = 0;
+    [SerializeField] private int startVersion;
 
 
 
@@ -44,7 +45,7 @@ public class Loader : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         //load the musicVersions in the musicVersions list
         musicVersions.Add(music1Versions);
@@ -87,7 +88,7 @@ public class Loader : MonoBehaviour
         }
 
         // Mute all the music
-        foreach (AudioSource music in musics)
+        foreach (var music in musics)
         {
             music.mute = true;
         }
@@ -97,7 +98,7 @@ public class Loader : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (currentVersion != lastVersion)
         {
@@ -173,6 +174,26 @@ public class Loader : MonoBehaviour
         // Load map and player
         maps[versionIndex].SetActive(true);
         players[versionIndex].SetActive(true);
+        switch (versionIndex)
+        {
+            case 7:
+                ItemManager.cannotMove = false;
+                break;
+            case 26:
+                LoadSkybox(1);
+                break;
+            case 27:
+                LoadSkybox(2);
+                break;
+            case 28:
+                LoadSkybox(3);
+                Application.targetFrameRate = 10;
+                break;
+            default:
+                LoadSkybox(0);
+                Application.targetFrameRate = -1;
+                break;
+        }
     }
 
     private void UnloadMap(int mapIndex)
@@ -209,12 +230,17 @@ public class Loader : MonoBehaviour
         }
 
         // mute the current music
-        foreach (AudioSource music in musics)
+        foreach (var music in musics)
         {
             music.mute = true;
         }
 
         // unmute the music we want to play
         musicDatabase[versionIndex].mute = false;
+    }
+    
+    private void LoadSkybox(int skyboxIndex)
+    {
+        RenderSettings.skybox = skyboxes[skyboxIndex];
     }
 }

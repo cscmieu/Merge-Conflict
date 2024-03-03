@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9137086282480808108}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerCommit 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1424535870135741841}
   - component: {fileID: 5168354401010237276}
   - component: {fileID: 7333180507542936413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
